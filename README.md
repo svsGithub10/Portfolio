@@ -40,6 +40,10 @@ Welcome to the repository for my personal portfolio website. This website is des
    open index.html
    ```
 
+4. Or directly visit my portfolio online website:
+
+   https://svs-portfolio-001.netlify.app/
+
 ## Contact
 
 If you have any questions, suggestions, or would like to collaborate, feel free to contact me:
@@ -47,6 +51,7 @@ If you have any questions, suggestions, or would like to collaborate, feel free 
 - **Email**: [shantaveereshvs@gmail.com](mailto:shantaveereshvs@gmail.com)
 - **LinkedIn**: [Shantveeresh Sheelavantar](https://www.linkedin.com/in/shantveeresh-sheelavantar-3193061b7/)
 - **Instagram**: [Instagram Profile](https://www.instagram.com/_s_v_sheelavantar_/)
+
 
 ## License
 
