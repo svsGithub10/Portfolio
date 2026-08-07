@@ -1,16 +1,31 @@
 import React from 'react';
 import { 
-  Github, Linkedin, Mail, Phone, ExternalLink, Code2, 
+  Mail, Phone, ExternalLink, Code2, 
   Server, Database, Award, Briefcase, GraduationCap, MapPin, MonitorSmartphone
 } from 'lucide-react';
 
+// Custom SVG components for Brand Icons (Since Lucide doesn't include logos)
+const Github = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+const Linkedin = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 export default function Portfolio() {
-  // Data derived from Shantaveeresh_Sheelavantar_Resume.pdf[cite: 1]
   const skills = [
-    { icon: <Code2 size={24} />, category: "Languages", items: ["Java", "JavaScript", "C", "C++", "SQL"] }, //[cite: 1]
-    { icon: <Server size={24} />, category: "Backend", items: ["Spring Boot", "Spring MVC", "RESTful APIs", "Node.js"] }, //[cite: 1]
-    { icon: <MonitorSmartphone size={24} />, category: "Frontend & Mobile", items: ["React.js", "Next.js", "HTML5", "CSS3", "Thymeleaf", "AJAX", "Flutter"] }, //[cite: 1]
-    { icon: <Database size={24} />, category: "Databases & Tools", items: ["MySQL", "PostgreSQL", "Socket.io", "Git", "AWS EC2", "Postman"] } //[cite: 1]
+    { icon: <Code2 size={24} />, category: "Languages", items: ["Java", "JavaScript", "C", "C++", "SQL"] },
+    { icon: <Server size={24} />, category: "Backend", items: ["Spring Boot", "Spring MVC", "RESTful APIs", "Node.js"] },
+    { icon: <MonitorSmartphone size={24} />, category: "Frontend & Mobile", items: ["React.js", "Next.js", "HTML5", "CSS3", "Thymeleaf", "AJAX", "Flutter"] },
+    { icon: <Database size={24} />, category: "Databases & Tools", items: ["MySQL", "PostgreSQL", "Socket.io", "Git", "AWS EC2", "Postman"] }
   ];
 
   const experience = [
@@ -20,12 +35,12 @@ export default function Portfolio() {
       location: "Haveri, Karnataka",
       date: "Jan 2025 - Present",
       points: [
-        "Designed and built a full-stack Service Center & Business Management System from the ground up.", //[cite: 1]
-        "Developed RESTful APIs using Spring Boot to handle order management, customer records, and finance/billing workflows.", //[cite: 1]
-        "Built server-rendered UI with Java, Thymeleaf, and MySQL, and implemented full CRUD operations.", //[cite: 1]
-        "Built real-time dashboards using JavaScript and AJAX for live order and revenue tracking.", //[cite: 1]
-        "Deployed the application on AWS EC2 and managed version control with Git.", //[cite: 1]
-        "Currently re-architecting the application with React/Next.js, Node.js, PostgreSQL, and Socket.io." //[cite: 1]
+        "Designed and built a full-stack Service Center & Business Management System from the ground up.",
+        "Developed RESTful APIs using Spring Boot to handle order management, customer records, and finance/billing workflows.",
+        "Built server-rendered UI with Java, Thymeleaf, and MySQL, and implemented full CRUD operations.",
+        "Built real-time dashboards using JavaScript and AJAX for live order and revenue tracking.",
+        "Deployed the application on AWS EC2 and managed version control with Git.",
+        "Currently re-architecting the application with React/Next.js, Node.js, PostgreSQL, and Socket.io."
       ]
     },
     {
@@ -34,8 +49,8 @@ export default function Portfolio() {
       location: "Bangalore, Karnataka",
       date: "Jun 2023 - Dec 2023",
       points: [
-        "Worked on backend development using Java and MySQL.", //[cite: 1]
-        "Contributed to real-world, production-style projects alongside cross-functional teams." //[cite: 1]
+        "Worked on backend development using Java and MySQL.",
+        "Contributed to real-world, production-style projects alongside cross-functional teams."
       ]
     }
   ];
@@ -43,15 +58,15 @@ export default function Portfolio() {
   const projects = [
     {
       title: "KodBook",
-      description: "A full-stack social media platform with account creation, profile management, and photo posts with likes/comments.", //[cite: 1]
-      tech: ["Java", "Spring", "MySQL", "HTML", "CSS"], //[cite: 1]
-      year: "2024" //[cite: 1]
+      description: "A full-stack social media platform with account creation, profile management, and photo posts with likes/comments.",
+      tech: ["Java", "Spring", "MySQL", "HTML", "CSS"],
+      year: "2024"
     },
     {
       title: "ShopKart",
-      description: "An e-commerce platform covering product management, cart, and checkout workflows.", //[cite: 1]
-      tech: ["Java", "Spring", "Thymeleaf"], //[cite: 1]
-      year: "2024" 
+      description: "An e-commerce platform covering product management, cart, and checkout workflows.",
+      tech: ["Java", "Spring", "Thymeleaf"],
+      year: "2024"
     }
   ];
 
@@ -71,7 +86,7 @@ export default function Portfolio() {
           <p className="max-w-2xl mx-auto text-lg leading-relaxed text-slate-400 mb-10">
             Full Stack Developer with production experience designing, building, and maintaining live business-critical web applications. 
             Strong command of OOP, MVC architecture, and RESTful API design. Currently extending systems with React, Node.js, Flutter, and Socket.io for real-time functionality. 
-          </p> {/*[cite: 1] */}
+          </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold">
             <a href="mailto:shantaveereshvs@gmail.com" className="flex items-center gap-2 px-5 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all">
@@ -86,7 +101,7 @@ export default function Portfolio() {
             <a href="https://linkedin.com/in/shantaveeresh-sheelavantar-3193061b7" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-5 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all">
               <Linkedin size={18} className="text-cyan-400" /> LinkedIn
             </a>
-          </div> {/*[cite: 1] */}
+          </div>
         </div>
       </header>
 
@@ -191,11 +206,11 @@ export default function Portfolio() {
               <p className="text-cyan-400 font-medium mb-4">Computer Science and Engineering</p>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Smt Kamala Sri Venkappa M. Agadi College of Engineering & Technology, Lakshmeshwar, Dist. Gadag
-              </p> {/*[cite: 1] */}
+              </p>
               <div className="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
                 <span className="text-sm font-semibold text-slate-500">2019 - 2023</span>
                 <span className="text-sm font-bold text-white bg-cyan-500/20 border border-cyan-500/30 px-4 py-1.5 rounded-full">CGPA: 7.43</span>
-              </div> {/*[cite: 1] */}
+              </div>
             </div>
           </div>
 
@@ -213,7 +228,7 @@ export default function Portfolio() {
                   <h4 className="font-bold text-white mb-1">Best Project of the Year 2023</h4>
                   <p className="text-sm text-slate-400 leading-relaxed">
                     KSCST Student Project Programme (46th Series) for published IoT research: "Chatura Suraksha Kavacha Smart Safety Helmet for Mine Workers" (IJSRCSEIT).
-                  </p> {/*[cite: 1] */}
+                  </p>
                 </div>
               </div>
               <div className="bg-white/[0.03] border border-white/10 p-6 rounded-2xl flex items-start gap-4">
@@ -223,9 +238,9 @@ export default function Portfolio() {
                 <div>
                   <h4 className="font-bold text-white mb-1">Certifications & Competitions</h4>
                   <ul className="text-sm text-slate-400 leading-relaxed space-y-2">
-                    <li>• HackerRank: SQL (Basic & Intermediate), Java (Basics)</li> {/*[cite: 1] */}
-                    <li>• freeCodeCamp: Responsive Web Design</li> {/*[cite: 1] */}
-                    <li>• Winner, Code Wizard (SKSVMACET Melanze 2023)</li> {/*[cite: 1] */}
+                    <li>• HackerRank: SQL (Basic & Intermediate), Java (Basics)</li>
+                    <li>• freeCodeCamp: Responsive Web Design</li>
+                    <li>• Winner, Code Wizard (SKSVMACET Melanze 2023)</li>
                   </ul>
                 </div>
               </div>
